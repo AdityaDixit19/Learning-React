@@ -1,17 +1,35 @@
 import React from 'react'
 function Hero() {
+  const data=[{images:'https://images.unsplash.com/photo-1773332585754-f1436987743b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',name:"Netflix",description:"lorem ipsum dolor sit amet, consectetur adipisicing."},
+    {
+      images:'https://images.unsplash.com/photo-1779464433263-35e2c02d1cc8?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      name:"Pintrest",
+      description:"lorem ipsum dolor sit amet, consectetur adipisicing.lorem ipsum dolor sit amet"
+    },
+    {
+      images:"https://images.unsplash.com/photo-1633174524778-61a18ee54490?q=80&w=2096&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",name:"Amazon Basics",description:"lorem ipsum dolor sit amet, consectetur adipisicing.lorem ipsum dolor sit amet"
+    },
+  ]
   return (
-    <div className=' w-full h-screen bg-zinc-200'>
-      <div className=' w-52  bg-zinc-100 absolute left-1/2 top-1/2  -translate-x-[50%] -translate-y-[50%] rounded-md overflow-hidden'>
-        <div className='w-full h-32 bg-zinc-300'>
-          <img  className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1633174524778-61a18ee54490?q=80&w=2096&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
-        </div>
-        <div className=' w-full px-2  py-2'>
-          <h2 className='font-semibold'>Amazon Basics</h2>
-          <p className='text-xs mt-5'>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-      </div>
+      <div className=' w-full h-screen  bg-zinc-200 gap-10 flex items-center justify-center rounded-md overflow-hidden'>
+        {data.map((data, index) => (
+  <div key={index}>
+    <div className="w-full h-32 bg-zinc-300 ">
+      <img
+        className="w-full h-full object-cover rounded-md "
+        src={data.images}
+        alt=""
+      />
     </div>
+    <div className="w-full px-2 py-2 bg-zinc-300">
+      <h2 className="font-semibold">{data.name}</h2>
+      <p className="text-xs mt-5 bg-zinc-400">
+        {data.description}
+      </p>
+    </div>
+  </div>
+))}
+      </div>
   )
 }
 export default Hero
