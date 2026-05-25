@@ -26,7 +26,7 @@ function Hero() {
       <p className="text-xs mt-5 bg-zinc-400">
         {data.description}
       </p>
-      <button className={`w-fit px-2 rounded ${data.stock?"bg-green-600":"bg-red-600"} mt-5 font-semibold`}>{data.stock?"In Stock":"Out of Stock"}</button>
+      <button  onClick={() => {if(!data.stock){alert("sorry out of stock")}else{alert("order placed successfully")}}} className={`w-fit px-2 rounded ${data.stock?"bg-green-600":"bg-red-600"} mt-5 font-semibold`}>{data.stock?"In Stock":"Out of Stock"}</button>
     </div>
   </div>
 ))}
