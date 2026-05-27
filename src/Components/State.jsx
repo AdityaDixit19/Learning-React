@@ -21,3 +21,9 @@ function State() {
 }
 
 export default State;
+{/*state ek data hota hai, react is data ka khayal rkhta hai, jab bhi ye data change hota hai react page ko update krta hai 
+jo bhi data hame future me change krna hai wo ham state me de detet hai aur jab future me data change hota hai toh react hamre liye wo change kr deta hai   
+
+usestate state ko turant update nahi krta, wo usestate ko update krta apne hisab se to fix performance issues
+*/}
+
